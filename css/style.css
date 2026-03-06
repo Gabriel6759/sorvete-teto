@@ -1,0 +1,281 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #2d2d2d; 
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho e Logo Estilizada */
+header {
+    background-color: #1a1a1a; 
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #b30000; 
+    box-shadow: 0 4px 15px rgba(179, 0, 0, 0.3);
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    margin-right: 1rem;
+}
+/* Fonte tech/art deco */
+.logo-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Poiret One', cursive; 
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    color: #e0e0e0;
+}
+/* Vermelho Teto nas brocas */
+.red-text {
+    color: #b30000; 
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(179, 0, 0, 0.7);
+}
+
+.slogan {
+    font-size: 1rem;
+    color: #888;
+    margin-top: -5px;
+    font-style: italic;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 0;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #b30000;
+    background-color: rgba(179, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Seções */
+.container {
+    padding: 4rem 10%;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Poiret One', cursive;
+    color: #b30000; 
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3d3d3d;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+/* Card de fundo */
+.sobre-content {
+    max-width: 2000px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: justify;
+    background-color: #3d3d3d; 
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid #b30000;
+}
+.sobre-content p {
+    color: #e0e0e0;
+    font-size: 30px;
+}
+
+
+/* Sabores */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #3d3d3d;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #4a4a4a;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(179, 0, 0, 0.4);
+    border-color: #b30000;
+}
+
+.card img {
+width: 200px;
+border-radius: 15px;
+border: 3px solid #b30000;
+transition: 0.5s;
+height: 250px;
+object-fit: cover;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+.card h3 {
+    color: #b30000;
+    margin-bottom: 0.5rem;
+    font-family: 'Poiret One', cursive;
+}
+
+/* Galeria */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.galeria-grid figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.galeria-grid img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #b30000;
+    transition: 0.5s;
+}
+
+
+.galeria-grid figure:hover img {
+    transform: scale(1.1);
+    border-color: #b30000;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(26, 26, 26, 0.8);
+    width: 100%;
+    color: white;
+    padding: 10px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.galeria-grid figure:hover figcaption {
+    opacity: 1;
+}
+
+/* Vídeo Responsivo */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px solid #3d3d3d;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 2px solid #3d3d3d;
+}
+
+.redes-sociais {
+    margin-top: 10px;
+}
+
+.redes-sociais a {
+    color: #b30000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.redes-sociais a:hover {
+    color: white;
+}
+
+
+/* ANIMAÇAO FEITA POR IA, SO PARA DEIXAR MAIS BONITO */
+
+footer {
+    position: relative; /* Necessário para a boneca não sair do rodapé */
+    overflow: hidden;   /* Esconde a boneca se ela sair dos limites */
+    height: 150px;      /* Ajuste a altura se necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.teto-footer {
+    position: absolute;
+    bottom: 10px;
+    width: 60px; /* Ajuste o tamanho da boneca aqui */
+    height: auto;
+    image-rendering: pixelated; /* Mantém o visual de Pixel Art nítido */
+    animation: 
+        andar 15s linear infinite, 
+        pular 0.6s ease-in-out infinite alternate;
+}
+/* Animação de andar de um lado para o outro */
+@keyframes andar {
+    0% { left: 0; transform: scaleX(1); }
+    45% { transform: scaleX(1); }
+    50% { left: calc(100% - 60px); transform: scaleX(-1); }
+    95% { transform: scaleX(-1); }
+    100% { left: 0; transform: scaleX(1); }
+}
+/* Animação de pulo (quicando) */
+@keyframes pular {
+    from { bottom: -9px; }
+    to { bottom: 50px; } /* Altura do pulo */
+}
