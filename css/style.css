@@ -1,4 +1,11 @@
 /* Configurações Gerais */
+
+:root {
+    --primary: #b30000;
+    --dark: #1a1a1a;
+    --pink-dark: #8a0000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -174,6 +181,7 @@ object-fit: cover;
     border-radius: 15px;
     border: 3px solid #b30000;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 
@@ -198,7 +206,7 @@ figcaption {
     opacity: 1;
 }
 
-/* Vídeo Responsivo */
+/* Vídeo */
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -245,8 +253,8 @@ footer {
 }
 
 
-/* ANIMAÇAO FEITA POR IA, SO PARA DEIXAR MAIS BONITO */
 
+/* ANIMAÇAO FEITA POR IA, SO PARA DEIXAR MAIS BONITO */
 footer {
     position: relative; /* Necessário para a boneca não sair do rodapé */
     overflow: hidden;   /* Esconde a boneca se ela sair dos limites */
@@ -278,4 +286,51 @@ footer {
 @keyframes pular {
     from { bottom: -9px; }
     to { bottom: 50px; } /* Altura do pulo */
+}
+
+
+
+/* CODIGO DO DOUGLAS */
+.fullscreen-btn {
+    display: block;
+    margin: 10px auto;
+    background: var(--pink-dark);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 3px solid var(--dark);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ 
+.fullscreen-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary);
+}
+ 
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 45, 66, 0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+ 
+#img-modal {
+    max-width: 90%;
+    max-height: 80%;
+    border: 6px solid var(--pink-dark);
+    border-radius: 20px;
+    animation: surgindo 0.4s ease-out;
+}
+ 
+@keyframes surgindo {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }

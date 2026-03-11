@@ -30,7 +30,7 @@
         <section id="sobre" class="container">
             <h2>Nossa Sintonia</h2>
             <div class="sobre-content">
-                <p>Nascida de uma brincadeira que se tornou lenda, a <strong>Teto's Drill Gelato</strong> não é uma sorveteria comum. Somos uma gelateria *Quimera*: misturamos a precisão técnica da tradição italiana com a energia vibrante da cultura UTAU.</p>
+                <p>Nascida de uma brincadeira que se tornou lenda, a <strong>Teto's Drill Gelato</strong> não é uma sorveteria comum. Somos uma gelateria <em>Quimera</em>: misturamos a precisão técnica da tradição italiana com a energia vibrante da cultura UTAU.</p>
                 <p>Nossos sorvetes são artesanais, mas com sabores "sintetizados" para criar experiências únicas. Nosso diferencial é a textura, moldada para ser tão perfeita quanto uma broca helicoidal, e o uso de ingredientes que surpreendem, assim como a voz da nossa quimera favorita.</p>
             </div>
         </section>
@@ -38,25 +38,29 @@
         <section id="sabores" class="container">
             <h2>Sabores Sintetizados (Menu)</h2>
             <div class="cards-grid">
-                <article class="card">
+                <article class="card"> 
+                    <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
                     <img src="img/morango.png" alt="Sorvete Red Drill">
                     <h3>Red Drill Velvet</h3>
                     <p>Base de baunilha artesanal misturada com pedaços de bolo Red Velvet e calda de frutas vermelhas "0401".</p>
                 </article>
 
                 <article class="card">
+                    <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
                     <img src="img/choco.png" alt="Sorvete Chimera Dark">
                     <h3>Chimera Dark Chocolate</h3>
                     <p>Chocolate belga 80% cacau, com infusão de pimenta caiena sutil e lascas de chocolate preto.</p>
                 </article>
 
                 <article class="card">
+                    <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
                     <img src="img/verde.png" alt="Sorvete Synth Wave">
                     <h3>Synth Matcha Wave</h3>
                     <p>Chá verde matcha premium sintetizado em um gelato cremoso, com toque de mochi de arroz.</p>
                 </article>
 
                 <article class="card">
+                    <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
                     <img src="img/bagete.png" alt="Sorvete Baguette Dream">
                     <h3>Baguette Dream</h3>
                     <p>Uma homenagem: gelato de creme com infusão de pão francês tostado e caramelo salgado.</p>
@@ -68,19 +72,19 @@
             <h2>Mural da Quimera</h2>
             <div class="galeria-grid">
                 <figure>
-                    <img src="img/banana.png" alt="Banana Teto's">
+                    <img src="img/banana.png" alt="Banana Teto's" onclick="abrirModal(this)">
                     <figcaption>Nosso espaço Synth-Tech</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/taça.png" alt="Taça Especial">
+                    <img src="img/taça.png" alt="Taça Especial" onclick="abrirModal(this)">
                     <figcaption>A taça "Infinite Drill"</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/sitentizado.png" alt="Preparação">
+                    <img src="img/sitentizado.png" alt="Preparação" onclick="abrirModal(this)">
                     <figcaption>Sintetizando amor</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/ambiente.png" alt="Ambiente Teto's">
+                    <img src="img/ambiente.png" alt="Ambiente Teto's" onclick="abrirModal(this)">
                     <figcaption>Nosso espaço Synth-Tech</figcaption>
                 </figure>
             </div>
@@ -89,7 +93,7 @@
         <section id="midia" class="container">
             <h2>Sinfonia Capilar</h2>
             <div class="video-wrapper">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TC80uw4HgCw?autoplay=1&mute=1" title="Kasane Teto Video" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TC80uw4HgCw?autoplay=1&mute=1&loop=1&playlist=TC80uw4HgCw" title="Kasane Teto Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
     </main>
@@ -101,5 +105,10 @@
     </div>
     <img src="img/teto-movel.png" class="teto-footer" alt="Kasane Teto Pixel Art">
 </footer>
+<div id="modal-container" class="modal-overlay" onclick="fecharModal()">
+    <img id="img-modal" src="" alt="Imagem Ampliada" onclick="event.stopPropagation()">
+    <span style="position:absolute; top:20px; right:30px; color:white; font-size:40px; cursor:pointer;" onclick="fecharModal()">&times;</span>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
