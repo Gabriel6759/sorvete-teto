@@ -10,8 +10,6 @@
 <body>
 
     <header>
-        
-
         <div class="logo-container">
             <h1  class="logo-text"> <img  class="logo-img" src="img/logo.jpg" alt="Logo Teto's Drill Gelato">Teto's Drill <span class="red-text">Gelato</span></h1>
             <p class="slogan">O sabor que perfura os céus!</p>
@@ -51,6 +49,13 @@
                     <h3>Chimera Dark Chocolate</h3>
                     <p>Chocolate belga 80% cacau, com infusão de pimenta caiena sutil e lascas de chocolate preto.</p>
                 </article>
+                
+                <article class="card">
+                    <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                    <img src="img/uva.png" alt="Sorvete casquinha de uva">
+                    <h3>Casquinha de Uva</h3>
+                    <p>Uma casquinha de uva fresca, com calda de frutas vermelhas "0401".</p>
+                </article>
 
                 <article class="card">
                     <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
@@ -65,6 +70,14 @@
                     <h3>Baguette Dream</h3>
                     <p>Uma homenagem: gelato de creme com infusão de pão francês tostado e caramelo salgado.</p>
                 </article>
+
+                <article class="card">
+                    <button class="fullscreen-btn" onclick="abrirModal(this)">Tela Cheia</button>
+                    <img src="img/cas morango.png" alt="Sorvete casquinha de morango">
+                    <h3>Casquinha de Morango</h3>
+                    <p>Uma casquinha de morango fresco, com calda de frutas vermelhas "0401".</p>
+                </article>
+
             </div>
         </section>
 
@@ -80,11 +93,11 @@
                     <figcaption>A taça "Infinite Drill"</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/sitentizado.png" alt="Preparação" onclick="abrirModal(this)">
+                    <img src="img/sitentizado.png" alt="Sintetizado" onclick="abrirModal(this)">
                     <figcaption>Sintetizando amor</figcaption>
                 </figure>
                 <figure>
-                    <img src="img/ambiente.png" alt="Ambiente Teto's" onclick="abrirModal(this)">
+                    <img src="img/bola branca.png" alt="Bola Branca Teto's" onclick="abrirModal(this)">
                     <figcaption>Nosso espaço Synth-Tech</figcaption>
                 </figure>
             </div>
@@ -98,17 +111,22 @@
         </section>
     </main>
 
-    <footer id="contato">
+<footer id="contato">
     <p>&copy; 2026 - Sintetizado por Gabriel - Número de Série 0401</p>
+
     <div class="redes-sociais">
-        <a href="#">YouTube</a> | <a href="#">GitHub</a> | <a href="#">Kasane Teto LOVERS</a>
+        <a href="https://www.youtube.com/channel/UCDsaRDKTCsGBJMUKx-KtukA" target="_blank">YouTube</a> | <a href="https://github.com/dashboard" target="_blank">GitHub</a> | <a href="#" target="_blank">Kasane Teto LOVERS</a>
     </div>
+
     <img src="img/teto-movel.png" class="teto-footer" alt="Kasane Teto Pixel Art">
 </footer>
+
 <div id="modal-container" class="modal-overlay" onclick="fecharModal()">
     <img id="img-modal" src="" alt="Imagem Ampliada" onclick="event.stopPropagation()">
     <span style="position:absolute; top:20px; right:30px; color:white; font-size:40px; cursor:pointer;" onclick="fecharModal()">&times;</span>
 </div>
+
 <script src="script.js"></script>
+
 </body>
 </html>

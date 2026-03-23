@@ -1,3 +1,4 @@
+//CODIGO DO DOUGLAS
 function abrirModal(botao) {
     const modal = document.getElementById('modal-container');
     const imagemModal = document.getElementById('img-modal');
@@ -21,4 +22,3 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-//CODIGO DO DOUGLAS

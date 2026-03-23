@@ -1,336 +1,406 @@
-/* Configurações Gerais */
+/* --- Configurações Gerais --- */
 
 :root {
-    --primary: #b30000;
-    --dark: #1a1a1a;
-    --pink-dark: #8a0000;
+    --primary: #b30000;    /* Define uma variável para o vermelho principal */
+    --dark: #1a1a1a;       /* Define uma variável para o cinza quase preto */
+    --pink-dark: #8a0000;  /* Define uma variável para um tom bordô/rosa escuro */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;             /* Zera o espaço externo padrão de todos os elementos */
+    padding: 0;            /* Zera o espaço interno padrão de todos os elementos */
+    box-sizing: border-box; /* Garante que bordas e preenchimento não aumentem o tamanho do elemento */
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #2d2d2d; 
-    color: #e0e0e0;
-    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif; /* Define a fonte arredondada para o texto */
+    background-color: #2d2d2d;            /* Define a cor de fundo grafite da página */
+    color: #e0e0e0;                       /* Define a cor do texto como um cinza claro */
+    line-height: 1.6;                     /* Define o espaçamento entre as linhas para facilitar a leitura */
 }
 
-/* Cabeçalho e Logo Estilizada */
+/* --- Cabeçalho e Logo Estilizada --- */
 header {
-    background-color: #1a1a1a; 
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 4px solid #b30000; 
-    box-shadow: 0 4px 15px rgba(179, 0, 0, 0.3);
+    background-color: #1a1a1a;            /* Cor de fundo do topo (mais escura que o corpo) */
+    color: white;                         /* Cor do texto dentro do header */
+    padding: 2rem;                        /* Espaçamento interno de 32px (aproximadamente) */
+    text-align: center;                   /* Alinha textos ao centro (caso o flex não atue) */
+    display: flex;                        /* Ativa o modo flexbox para organizar elementos */
+    justify-content: space-between;       /* Espaça o logo de um lado e o menu do outro */
+    align-items: center;                  /* Alinha os itens verticalmente no meio */
+    border-bottom: 4px solid #b30000;     /* Adiciona uma linha vermelha grossa na base */
+    box-shadow: 0 4px 15px rgba(179, 0, 0, 0.3); /* Adiciona uma sombra vermelha suave */
 }
 
 .logo-img {
-    width: 120px;
-    height: auto;
-    margin-right: 1rem;
+    width: 120px;                         /* Define a largura fixa da imagem do logo */
+    height: auto;                         /* Mantém a proporção da altura da imagem */
+    margin-right: 1rem;                   /* Afasta a imagem do texto à direita */
 }
-/* Fonte tech/art deco */
+
 .logo-text {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-family: 'Poiret One', cursive; 
-    font-size: 3.5rem;
-    letter-spacing: -2px;
-    text-transform: uppercase;
-    color: #e0e0e0;
+    display: flex;                        /* Organiza itens internos do logo (img + texto) */
+    align-items: center;                  /* Centraliza o texto com a imagem verticalmente */
+    justify-content: flex-start;          /* Garante que o conteúdo comece do início */
+    font-family: 'Poiret One', cursive;   /* Usa a fonte artística estilo Tech/Deco */
+    font-size: 3.5rem;                    /* Define um tamanho de letra bem grande */
+    letter-spacing: -2px;                 /* Encurta o espaço entre as letras */
+    text-transform: uppercase;            /* Transforma todas as letras em maiúsculas */
+    color: #e0e0e0;                       /* Cor do texto do logo */
 }
-/* Vermelho Teto nas brocas */
+
+/* --- Vermelho Teto nas brocas --- */
 .red-text {
-    color: #b30000; 
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(179, 0, 0, 0.7);
+    color: #b30000;                       /* Aplica o vermelho específico da Teto */
+    font-weight: bold;                    /* Deixa a letra em negrito */
+    text-shadow: 0 0 10px rgba(179, 0, 0, 0.7); /* Cria um brilho neon vermelho atrás do texto */
 }
 
 .slogan {
-    font-size: 1rem;
-    color: #888;
-    margin-top: -5px;
-    font-style: italic;
+    font-size: 1rem;                      /* Tamanho de fonte padrão para o slogan */
+    color: #888;                          /* Cor cinza média para o slogan */
+    margin-top: -5px;                     /* Puxa o slogan um pouco para cima do logo */
+    font-style: italic;                   /* Deixa o texto em itálico */
 }
 
-/* Navegação */
+/* --- Navegação --- */
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 0;
+    list-style: none;                     /* Remove as "bolinhas" da lista do menu */
+    display: flex;                        /* Coloca os itens do menu lado a lado */
+    justify-content: center;              /* Centraliza os links no espaço */
+    gap: 25px;                            /* Cria um espaço de 25px entre cada link */
+    margin-top: 0;                        /* Garante que não haja margem no topo */
 }
 
 nav a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    padding: 5px 10px;
+    color: #e0e0e0;                       /* Cor dos links do menu */
+    text-decoration: none;                /* Remove o sublinhado padrão do link */
+    font-weight: 600;                     /* Deixa o texto levemente em negrito */
+    text-transform: uppercase;            /* Links em maiúsculo */
+    font-size: 0.9rem;                    /* Letra um pouco menor que o normal */
+    transition: 0.3s;                     /* Define que qualquer mudança durará 0.3 segundos */
+    padding: 5px 10px;                    /* Espaçamento interno nos links */
 }
 
 nav a:hover {
-    color: #b30000;
-    background-color: rgba(179, 0, 0, 0.1);
-    border-radius: 5px;
+    color: #b30000;                       /* Muda a cor do link para vermelho ao passar o mouse */
+    background-color: rgba(179, 0, 0, 0.1); /* Cria um fundo vermelho bem transparente */
+    border-radius: 5px;                   /* Arredonda os cantos desse fundo */
 }
 
-/* Seções */
+/* --- Seções --- */
 .container {
-    padding: 4rem 10%;
-    text-align: center;
+    padding: 4rem 10%;                    /* 64px de topo/base e 10% nas laterais */
+    text-align: center;                   /* Centraliza todo o texto das seções */
 }
 
 h2 {
-    font-family: 'Poiret One', cursive;
-    color: #b30000; 
-    font-size: 2.8rem;
-    margin-bottom: 2.5rem;
-    text-transform: uppercase;
-    border-bottom: 2px solid #3d3d3d;
-    display: inline-block;
-    padding-bottom: 10px;
+    font-family: 'Poiret One', cursive;   /* Fonte tech para os títulos das seções */
+    color: #b30000;                       /* Títulos em vermelho */
+    font-size: 2.8rem;                    /* Tamanho grande para títulos h2 */
+    margin-bottom: 2.5rem;                /* Espaço abaixo do título */
+    text-transform: uppercase;            /* Títulos em maiúsculo */
+    border-bottom: 2px solid #3d3d3d;     /* Linha cinza fina embaixo do título */
+    display: inline-block;                /* Faz a borda ter apenas a largura do texto */
+    padding-bottom: 10px;                 /* Espaço entre o texto e a linha de baixo */
 }
-/* Card de fundo */
+
+/* --- Card de fundo --- */
 .sobre-content {
-    max-width: 2000px;
-    height: 400px;
-    margin: 0 auto;
-    text-align: justify;
-    background-color: #3d3d3d; 
-    padding: 2rem;
-    border-radius: 15px;
-    border-left: 5px solid #b30000;
+    max-width: 2000px;                    /* Largura máxima permitida */
+    height: 400px;                        /* Altura fixa (cuidado: pode cortar texto no mobile) */
+    margin: 0 auto;                       /* Centraliza o bloco na horizontal */
+    text-align: justify;                  /* Distribui o texto para alinhar nas duas margens */
+    background-color: #3d3d3d;            /* Fundo cinza um pouco mais claro que o body */
+    padding: 2rem;                        /* Espaçamento interno de 32px */
+    border-radius: 15px;                  /* Arredonda os cantos do bloco */
+    border-left: 5px solid #b30000;       /* Barra vermelha grossa na lateral esquerda */
 }
+
 .sobre-content p {
-    color: #e0e0e0;
-    font-size: 30px;
+    color: #e0e0e0;                       /* Cor do texto do parágrafo */
+    font-weight: normal;                  /* Correção: define o peso da fonte como normal */
+    font-size: 1.7rem;                    /* Tamanho da letra do parágrafo */
 }
 
-
-/* Sabores */
+/* --- Sabores (Grid) --- */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    display: grid;                        /* Ativa o sistema de grade */
+    /* Cria colunas automáticas de no mínimo 220px que ocupam o espaço disponível */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 25px;                            /* Espaço entre os cartões */
 }
 
 .card {
-    background: #3d3d3d;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #4a4a4a;
+    background: #3d3d3d;                  /* Cor de fundo do cartão */
+    padding: 4px;                      /* Espaçamento interno de 24px */
+    border-radius: 15px;                  /* Arredonda os cantos */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra preta discreta */
+    transition: transform 0.3s, box-shadow 0.3s; /* Suaviza a animação de hover */
+    border: 1px solid #4a4a4a;            /* Borda cinza fina */
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(179, 0, 0, 0.4);
-    border-color: #b30000;
+    transform: translateY(-8px);          /* Levanta o cartão em 8px ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(179, 0, 0, 0.4); /* Aumenta e avermelha a sombra */
+    border-color: #b30000;                /* Muda a borda para vermelho */
 }
 
 .card img {
-width: 200px;
-border-radius: 15px;
-border: 3px solid #b30000;
-transition: 0.5s;
-height: 250px;
-object-fit: cover;
+    width: 200px;                         /* Largura da imagem do sorvete */
+    border-radius: 15px;                  /* Arredonda os cantos da imagem */
+    border: 3px solid #b30000;            /* Borda vermelha na imagem */
+    transition: 0.5s;                     /* Suaviza mudanças na imagem */
+    height: 250px;                        /* Altura fixa para alinhar os cards */
+    object-fit: cover;                    /* Corta a imagem para preencher sem esticar */
 }
 
 .card:hover img {
-    filter: grayscale(0%);
+    filter: grayscale(0%);                /* Garante que a imagem esteja colorida no hover */
 }
 
 .card h3 {
-    color: #b30000;
-    margin-bottom: 0.5rem;
-    font-family: 'Poiret One', cursive;
+    color: #b30000;                       /* Nome do sabor em vermelho */
+    margin-bottom: 0.5rem;                /* Espaço abaixo do nome */
+    font-family: 'Poiret One', cursive;   /* Fonte artística no nome do sabor */
 }
 
-/* Galeria */
+/* --- Galeria --- */
 .galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    display: grid;                        /* Sistema de grade para fotos */
+    /* Colunas de no mínimo 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;                            /* Espaço entre as fotos */
 }
 
 .galeria-grid figure {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
+    position: relative;                   /* Necessário para posicionar o figcaption em cima */
+    overflow: hidden;                     /* Esconde a imagem se ela crescer além do limite */
+    border-radius: 10px;                  /* Arredonda o container da foto */
 }
 
 .galeria-grid img {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 3px solid #b30000;
-    transition: 0.5s;
-    cursor: pointer;
+    width: 350px;                         /* Largura da imagem da galeria */
+    height: 250px;                        /* Altura da imagem da galeria */
+    object-fit: cover;                    /* Ajusta a foto ao quadrado definido */
+    border-radius: 15px;                  /* Arredonda a foto */
+    border: 3px solid #b30000;            /* Borda vermelha */
+    transition: 0.5s;                     /* Suaviza o zoom no hover */
+    cursor: pointer;                      /* Mostra a "mãozinha" do mouse */
 }
 
-
 .galeria-grid figure:hover img {
-    transform: scale(1.1);
-    border-color: #b30000;
+    transform: scale(1.1);                /* Dá um zoom de 10% na foto ao passar o mouse */
+    border-color: #b30000;                /* Reforça a cor da borda */
 }
 
 figcaption {
-    position: absolute;
-    bottom: 0;
-    background: rgba(26, 26, 26, 0.8);
-    width: 100%;
-    color: white;
-    padding: 10px;
-    font-size: 0.8rem;
-    opacity: 0;
-    transition: 0.3s;
+    position: absolute;                   /* Coloca o texto em cima da imagem */
+    bottom: 0;                            /* Alinha no rodapé da imagem */
+    background: rgba(26, 26, 26, 0.8);    /* Fundo preto transparente */
+    width: 100%;                          /* Ocupa toda a largura da foto */
+    color: white;                         /* Texto branco */
+    padding: 10px;                        /* Espaço interno do texto */
+    font-size: 0.8rem;                    /* Texto pequeno */
+    opacity: 0;                           /* Começa invisível */
+    transition: 0.3s;                     /* Suaviza o aparecimento */
 }
 
 .galeria-grid figure:hover figcaption {
-    opacity: 1;
+    opacity: 1;                           /* Mostra o texto ao passar o mouse na foto */
 }
 
-/* Vídeo */
+/* --- Vídeo --- */
 .video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    max-width: 800px;
-    margin: 0 auto;
-    border: 4px solid #3d3d3d;
-    border-radius: 15px;
-    overflow: hidden;
+    position: relative;                   /* Base para posicionar o iframe fixo */
+    padding-bottom: 56.25%;               /* Truque para manter proporção 16:9 (YouTube) */
+    height: 0;                            /* Altura base zero, controlada pelo padding */
+    max-width: 800px;                     /* Largura máxima do vídeo */
+    margin: 0 auto;                       /* Centraliza o vídeo */
+    border: 4px solid #3d3d3d;            /* Moldura cinza grossa */
+    border-radius: 15px;                  /* Arredonda a moldura */
+    overflow: hidden;                     /* Garante que o vídeo não saia da borda redonda */
 }
 
 .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute;                   /* Fixa o vídeo dentro do wrapper */
+    top: 0;                               /* No topo */
+    left: 0;                              /* Na esquerda */
+    width: 100%;                          /* Ocupa todo o espaço do container */
+    height: 100%;                         /* Ocupa toda a altura do container */
 }
 
-/* Rodapé */
+/* --- Rodapé --- */
 footer {
-    background-color: #1a1a1a;
-    color: #888;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    border-top: 2px solid #3d3d3d;
+    background-color: #1a1a1a;            /* Cor escura para o rodapé */
+    color: #888;                          /* Texto cinza para créditos */
+    text-align: center;                   /* Centraliza tudo */
+    padding: 2rem;                        /* Espaçamento interno */
+    margin-top: 2rem;                     /* Espaço acima do rodapé */
+    border-top: 2px solid #3d3d3d;        /* Linha divisória no topo */
 }
 
 .redes-sociais {
-    margin-top: 10px;
+    margin-top: 10px;                     /* Espaço acima dos links sociais */
 }
 
 .redes-sociais a {
-    color: #b30000;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    color: #b30000;                       /* Links das redes em vermelho */
+    text-decoration: none;                /* Sem sublinhado */
+    margin: 0 10px;                       /* Espaço entre os links */
+    font-weight: bold;                    /* Links em negrito */
+    font-size: 0.9rem;                    /* Tamanho do link */
 }
 
 .redes-sociais a:hover {
-    color: white;
+    color: white;                         /* Fica branco ao passar o mouse */
 }
 
-
-
-/* ANIMAÇAO FEITA POR IA, SO PARA DEIXAR MAIS BONITO */
+/* --- Animação da Teto --- */
 footer {
-    position: relative; /* Necessário para a boneca não sair do rodapé */
-    overflow: hidden;   /* Esconde a boneca se ela sair dos limites */
-    height: 150px;      /* Ajuste a altura se necessário */
-    display: flex;
+    position: relative;                   /* Para a boneca "andar" dentro dele */
+    overflow: hidden;                     /* Não deixa a boneca sair para fora da tela */
+    height: 150px;                        /* Altura para a Teto ter espaço para pular */
+    display: flex;                        /* Organiza conteúdo em coluna */
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .teto-footer {
-    position: absolute;
-    bottom: 10px;
-    width: 60px; /* Ajuste o tamanho da boneca aqui */
+    position: absolute;                   /* Posicionamento livre dentro do rodapé */
+    bottom: 10px;                         /* Altura inicial em relação ao chão */
+    width: 60px;                          /* Tamanho da pixel art */
     height: auto;
-    image-rendering: pixelated; /* Mantém o visual de Pixel Art nítido */
+    image-rendering: pixelated;           /* Faz o pixel art não ficar embaçado */
     animation: 
-        andar 15s linear infinite, 
-        pular 0.6s ease-in-out infinite alternate;
+        andar 15s linear infinite,        /* Aplica a animação de caminhar */
+        pular 0.6s ease-in-out infinite alternate; /* Aplica a animação de quicar */
 }
-/* Animação de andar de um lado para o outro */
+
 @keyframes andar {
-    0% { left: 0; transform: scaleX(1); }
-    45% { transform: scaleX(1); }
-    50% { left: calc(100% - 60px); transform: scaleX(-1); }
-    95% { transform: scaleX(-1); }
-    100% { left: 0; transform: scaleX(1); }
+    0% { left: 0; transform: scaleX(1); } /* Início: esquerda, olhando para direita */
+    45% { transform: scaleX(1); }         /* Mantém a direção até quase chegar no fim */
+    50% { left: calc(100% - 60px); transform: scaleX(-1); } /* Chega na direita e vira */
+    95% { transform: scaleX(-1); }        /* Mantém a direção voltando */
+    100% { left: 0; transform: scaleX(1); } /* Volta ao início e vira pra direita de novo */
 }
-/* Animação de pulo (quicando) */
+
 @keyframes pular {
-    from { bottom: -9px; }
-    to { bottom: 50px; } /* Altura do pulo */
+    from { bottom: -9px; }                /* Ponto mais baixo do pulo */
+    to { bottom: 50px; }                  /* Ponto mais alto do pulo */
 }
 
-
-
-/* CODIGO DO DOUGLAS */
+/* --- Código do Douglas (Modal) --- */
 .fullscreen-btn {
-    display: block;
-    margin: 10px auto;
-    background: var(--pink-dark);
-    color: white;
-    padding: 8px 15px;
-    border-radius: 12px;
-    border: 3px solid var(--dark);
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+    display: block;                       /* Faz o botão ser um bloco inteiro */
+    margin: 10px auto;                    /* Centraliza o botão */
+    background: var(--pink-dark);         /* Usa a cor bordô definida no início */
+    color: white;                         /* Texto branco */
+    padding: 8px 15px;                    /* Espaço dentro do botão */
+    border-radius: 12px;                  /* Arredonda o botão */
+    border: 3px solid var(--dark);        /* Borda escura no botão */
+    font-weight: bold;                    /* Texto em negrito */
+    cursor: pointer;                      /* Cursor de clique */
+    transition: 0.3s;                     /* Suaviza o hover */
 }
- 
+
 .fullscreen-btn:hover {
-    transform: scale(1.1);
-    background: var(--primary);
+    transform: scale(1.1);                /* Aumenta o botão um pouco no hover */
+    background: var(--primary);           /* Muda para o vermelho vibrante */
 }
- 
+
 .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(43, 45, 66, 0.95);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
+    display: none;                        /* Começa invisível até ser ativado via JS */
+    position: fixed;                      /* Fica fixo na tela mesmo rolando a página */
+    top: 0; left: 0;
+    width: 100%; height: 100%;            /* Ocupa a tela inteira */
+    background: rgba(43, 45, 66, 0.95);   /* Fundo escuro quase opaco */
+    z-index: 9999;                        /* Garante que fique acima de TODOS os elementos */
+    justify-content: center;              /* Centraliza a imagem horizontalmente */
+    align-items: center;                  /* Centraliza a imagem verticalmente */
 }
- 
+
 #img-modal {
-    max-width: 90%;
-    max-height: 80%;
-    border: 6px solid var(--pink-dark);
-    border-radius: 20px;
-    animation: surgindo 0.4s ease-out;
+    max-width: 90%;                       /* Imagem não ultrapassa 90% da largura da tela */
+    max-height: 80%;                      /* Imagem não ultrapassa 80% da altura da tela */
+    border: 6px solid var(--pink-dark);   /* Moldura bordô na foto ampliada */
+    border-radius: 20px;                  /* Cantos bem arredondados */
+    animation: surgindo 0.4s ease-out;    /* Aplica a animação de aparecer */
 }
- 
+
 @keyframes surgindo {
-    from { transform: scale(0.5); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from { transform: scale(0.5); opacity: 0; } /* Começa pequena e transparente */
+    to { transform: scale(1); opacity: 1; }     /* Termina no tamanho real e visível */
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {               /* Configurações apenas para telas menores que 768px */
+    header {
+        flex-direction: row;              /* Mantém lado a lado */
+        flex-wrap: wrap;                  /* Permite quebrar linha se não couber */
+        justify-content: center;          /* Centraliza os itens no mobile */
+        padding: 1rem;
+    }
+
+    .logo-img {
+        width: 60px;                      /* Reduz o tamanho do logo no celular */
+        margin-right: 10px;
+    }
+
+    .logo-text {
+        font-size: 1.6rem;                /* Diminui a fonte do título no celular */
+    }
+
+    nav {
+        width: 100%;                      /* Menu ocupa a largura toda */
+        margin-top: 15px;                 /* Espaço entre o logo e o menu */
+    }
+
+    nav ul {
+        flex-direction: row;              /* Mantém itens em linha */
+        justify-content: center;          /* Centraliza links */
+        flex-wrap: wrap;                  /* Quebra linha se forem muitos links */
+        gap: 10px;                        /* Diminui o espaço entre links */
+    }
+
+    .container {
+        padding: 2rem 5%;                 /* Reduz o espaçamento geral para aproveitar melhor a tela */
+    }
+
+    h2 {
+        font-size: 2rem;                  /* Diminui o título para ocupar menos espaço vertical */
+        margin-bottom: 1.5rem;            /* Aproxima o conteúdo do título */
+    }
+
+    .sobre-content {
+        height: auto;                     /* Remove a altura fixa de 400px para não cortar texto */
+        padding: 1.5rem;
+        text-align: left;                 /* Texto alinhado à esquerda facilita a leitura no celular */
+    }
+
+    .sobre-content p {
+        font-size: 1.1rem;                /* Diminui a letra para caber melhor na tela pequena */
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mostra 2 colunas de cards em vez de 1 */
+        gap: 15px;
+    }
+
+    .card img {
+        width: 100%;                      /* Imagem ocupa toda a largura do card */
+        aspect-ratio: 1 / 1;              /* Força a imagem a ser quadrada (1:1) */
+        object-fit: cover;                /* Garante que a imagem preencha o espaço sem distorcer */
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mostra 2 colunas de fotos na galeria */
+        gap: 15px;
+    }
+
+    .galeria-grid img {
+        width: 100%;                      /* Imagem da galeria ocupa o espaço todo */
+        height: auto;                     /* Altura proporcional */
+    }
 }
